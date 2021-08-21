@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Store</title>
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="stylesheet/bootstrap.min.css">
+</head>
+<body>
+    <main>
+        <section class="container pt-5 mt-5">
+            <div class="row">
+                <!-- image -->
+                <div class="ps-5 col-md-6">
+                    <img width="100%" src="images/mac.png" alt="Macbook Pro">
+                </div>
+                <div  class=" container col-md-6">
+                    <!-- description part  -->
+                    <div class="ps-5 description">
+                        <h1>Customize Your Blue 24-inch iMac with Apple M1 chip</h1>
+                        <br>
+                        <p>Apple M1 chip with 8-core CPU with 4 perfomance cores and 4 efficiency cores, 7-core GPu, and 16 core Netural Engine
+                            8GB unified memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic Keyboard US English</p>
+                    </div>
+                    <!-- customization part -->
+                    <div class="cutstomize-options ps-5">
+                        <!-- memory options -->
+                        <div class="col-md-8 memory-options">
+                            <h4 class="my-3">Memory</h4>
+                            <button onclick="initialPrice('memory-cost')" id="btn-8gb" class="btn btn-outline-dark border">
+                                8GB unified memory
+                            </button>
+                            <button id="btn-16gb" class="btn btn-outline-dark ms-3 border">
+                                16 GB unified memory
+                            </button>
+                        </div>
+                        <!-- storage options -->
+                        <div class="col-md-12 storage-options">
+                            <h4 class="my-3">Storage</h4>
+                            <button onclick="initialPrice('storage-cost')" class="btn btn-outline-dark border" id="256ssd">256GB SSD storage</button>
+
+                            <button class="btn btn-outline-dark border ms-3"id="ssd512">512GB SSD storage</button>
+
+                            <button class="btn btn-outline-dark border ms-3" id="ssd1tb">1TB SSD storage</button>
+                        </div>
+                        <!-- delivery options -->
+                        <div class="col-md-12 delivery-options">
+                            <h4 class="my-3">Choose your delivery Option</h4>
+                            <button onclick="initialPrice('delivery-cost')" class="btn btn-outline-dark border" id="regular-delivery">Friday,25 Aug FREE delivery</button>
+
+                            <button class="btn btn-outline-dark border ms-3" id="fast-delivery">Friday,21 Aug  Delivery Charge $20</button>
+                        </div>
+                        
+                    </div>
+
+                    <!-- pricing table  -->
+                    <div class="costing col-md-8 ps-5 pt-4">
+                        <table class="table">
+                            
+                            <tbody>
+                                <tr>
+                                    
+                                    <td colspan="2"><h5>Best Price</h5></td>
+                                    
+                                    <td><h5>$<span id="regular-price">1299</span></h5></td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td colspan="2"><h5>Exra Memory Cost</h5></td>
+                                    
+                                    <td><h5>$<span id="memory-cost">0</span></td>
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td colspan="2">
+                                        <h5>Extra Storage Cost</h5>
+                                    </td>
+                                    <td>
+                                        <h5>$<span id="storage-cost">0</span>
+                                        </td>
+                                </tr>
+                                <tr class=" border-dark">
+                                
+                                    <td colspan="2" ><h5>Delivery Charge</h5></td>
+                                    <td>
+                                        <h5>$<span id="delivery-cost">0</span>
+                                    </td>
+                                </tr>
+                                <tr class="total-price" >
+                                    
+                                    <td colspan="2"><h5>Total price</h5></td>
+                                    <td><h5>$<span id="price">1299</span></td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+
+                    <!-- extra for bonus -->
+                    <!-- promo code  -->
+                    <div class="promo-code col-md-8 ps-5 pt-4">
+                        <p>Add Promo Code</p>
+                        <input id="promo-field" type="text" class="py-1" placeholder="Enter Promo Code">
+                        <button onclick="priceForPromocode()" id="apply-btn" class="btn btn-danger" >Apply</button>
+                        <h4 id="error"></h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="container ">
+        <hr>
+        <!-- total  -->
+        <div class="d-flex">
+            <h2 class=" mx-auto py-4"> Total: $<span id="final-price">1299</span>
+            </h2>
+        </div>
+        
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
